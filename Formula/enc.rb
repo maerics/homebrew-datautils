@@ -5,47 +5,47 @@
 class Enc < Formula
   desc "Transcode various formats between stdin and stdout."
   homepage "https://github.com/maerics/enc"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/maerics/enc/releases/download/v0.2.0/enc_v0.2.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "3de665e0f4adeabb0ca17936ea3e96357f2ecd03a112591ea05403c858bd8ea2"
+      url "https://github.com/maerics/enc/releases/download/v0.2.1/enc_v0.2.1_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "c1742992221a1bea9b307603f85b985ae6f98ac5929194505c253534a5a2862e"
 
       def install
-        bin.install "#{prefix}/enc"
-        bin.install_symlink "#{prefix}/enc" => "#{prefix}/dec"
+        bin.install "enc"
+        bin.install_symlink "enc" => "dec"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/maerics/enc/releases/download/v0.2.0/enc_v0.2.0_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "b301a13061c1a430a8153bcaaf9fd666e6bbbfb4913dbf6892e29616cdbbb90f"
+      url "https://github.com/maerics/enc/releases/download/v0.2.1/enc_v0.2.1_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "64cf5433c7882923140e466484dcfa9b0814a307425e4ed2cbf238b1c42a536c"
 
       def install
-        bin.install "#{prefix}/enc"
-        bin.install_symlink "#{prefix}/enc" => "#{prefix}/dec"
+        bin.install "enc"
+        bin.install_symlink "enc" => "dec"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/maerics/enc/releases/download/v0.2.0/enc_v0.2.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "7505c49c44bc312a578a137fb1c675f803c978638fb092b0a10dd7ed03572bb4"
+      url "https://github.com/maerics/enc/releases/download/v0.2.1/enc_v0.2.1_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "d8db0b430433580d14e96f07e6976ea675a0c715c550245e5736d9d0fece9bbf"
 
       def install
-        bin.install "#{prefix}/enc"
-        bin.install_symlink "#{prefix}/enc" => "#{prefix}/dec"
+        bin.install "enc"
+        bin.install_symlink "enc" => "dec"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/maerics/enc/releases/download/v0.2.0/enc_v0.2.0_linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "21138f9a0b5e3dbccccfbecb44287437cd8634e96010367ebeae5cb280b3b086"
+      url "https://github.com/maerics/enc/releases/download/v0.2.1/enc_v0.2.1_linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "272085081ebc7c943b892b8fca0b1edf5781853938eaabe419856ba31a767458"
 
       def install
-        bin.install "#{prefix}/enc"
-        bin.install_symlink "#{prefix}/enc" => "#{prefix}/dec"
+        bin.install "enc"
+        bin.install_symlink "enc" => "dec"
       end
     end
   end
