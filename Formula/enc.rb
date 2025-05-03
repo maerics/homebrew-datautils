@@ -5,13 +5,13 @@
 class Enc < Formula
   desc "Transcode various formats between stdin and stdout."
   homepage "https://github.com/maerics/enc"
-  version "0.4.5"
+  version "0.4.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/maerics/enc/releases/download/v0.4.5/enc_v0.4.5_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "275b2da915d6ffe5ea1e823449d72d876d67acaf52ecd949d499bd7a47888025"
+      url "https://github.com/maerics/enc/releases/download/v0.4.6/enc_v0.4.6_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "35ed22b0f7c023bf4328ae11f4eb533522e96323bcaffb583e08bb26726d28a5"
 
       def install
         bin.install "enc"
@@ -19,8 +19,8 @@ class Enc < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/maerics/enc/releases/download/v0.4.5/enc_v0.4.5_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "d142be9b2bcb8891a98a4f8d8f0216d99f348e12f31e7ec0bab8d912d0184ffb"
+      url "https://github.com/maerics/enc/releases/download/v0.4.6/enc_v0.4.6_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "c2a2e01ac06b87781b6023ed0bf2e71c425c17526cb0d9c4022b3d1c5f79df60"
 
       def install
         bin.install "enc"
@@ -32,8 +32,8 @@ class Enc < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/maerics/enc/releases/download/v0.4.5/enc_v0.4.5_linux_x86_64.tar.gz", using: CurlDownloadStrategy
-        sha256 "c0d041ef1d03f4bbddbef0542076c61c1be85d8aafa3c313da3220e3e66319ec"
+        url "https://github.com/maerics/enc/releases/download/v0.4.6/enc_v0.4.6_linux_x86_64.tar.gz", using: CurlDownloadStrategy
+        sha256 "3ae7eb5f8552583135477983a253d5877582ee4ed5599fbfc32752cf848c02c4"
 
         def install
           bin.install "enc"
@@ -43,8 +43,8 @@ class Enc < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/maerics/enc/releases/download/v0.4.5/enc_v0.4.5_linux_arm64.tar.gz", using: CurlDownloadStrategy
-        sha256 "e94653ab59e40365760580efcf469b2efac691c7c99dffe65f3c9206d90a56ef"
+        url "https://github.com/maerics/enc/releases/download/v0.4.6/enc_v0.4.6_linux_arm64.tar.gz", using: CurlDownloadStrategy
+        sha256 "7eab3720d55ae5fa4e9f0850b93e8affc9b250ee52434c53a9786368bc2377da"
 
         def install
           bin.install "enc"
