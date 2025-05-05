@@ -5,21 +5,21 @@
 class Dgst < Formula
   desc "Compute and print message digest hash values of stdin."
   homepage "https://github.com/maerics/dgst"
-  version "0.1.0"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/maerics/dgst/releases/download/v0.1.0/dgst_v0.1.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "e6e154abb20497c46b84542ad425dcb968b9998418699434416c4c8884f39ec8"
+    if Hardware::CPU.intel?
+      url "https://github.com/maerics/dgst/releases/download/v0.1.2/dgst_v0.1.2_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "80048a48de4f6e888c2a304a92be869819ba124e7cfd240f3cc6359db34996bc"
 
       def install
         bin.install "dgst"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/maerics/dgst/releases/download/v0.1.0/dgst_v0.1.0_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "65cc2ee02a62d98aaf521cc6c5d708d97b39d373017baf59b7d6d809d4319780"
+    if Hardware::CPU.arm?
+      url "https://github.com/maerics/dgst/releases/download/v0.1.2/dgst_v0.1.2_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "d59bccf8cb6899bc7ff0bc35fa1a63a6d2e2f265317e8d83727658fed3f1c6fe"
 
       def install
         bin.install "dgst"
@@ -28,20 +28,24 @@ class Dgst < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/maerics/dgst/releases/download/v0.1.0/dgst_v0.1.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "61785ea8dec799a4cd1446c7fce863ebc29e72e49090474c3251589bdba922a1"
+    if Hardware::CPU.intel?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/maerics/dgst/releases/download/v0.1.2/dgst_v0.1.2_linux_x86_64.tar.gz", using: CurlDownloadStrategy
+        sha256 "ce673f468207e2b4e06f6ac867ba3dc6450e23efbf5ccbf6178318ed51c3acc0"
 
-      def install
-        bin.install "dgst"
+        def install
+          bin.install "dgst"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/maerics/dgst/releases/download/v0.1.0/dgst_v0.1.0_linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "3dbfd14a7cc6d7df337c29ee35bd9452892d574e2d737bc814ebbf2a5cf27f9e"
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/maerics/dgst/releases/download/v0.1.2/dgst_v0.1.2_linux_arm64.tar.gz", using: CurlDownloadStrategy
+        sha256 "f732469ef53c1406b27cc26a85b9030a1722b2d4b6fe04da301830238f9e8afc"
 
-      def install
-        bin.install "dgst"
+        def install
+          bin.install "dgst"
+        end
       end
     end
   end
