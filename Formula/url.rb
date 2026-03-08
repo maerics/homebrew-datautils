@@ -5,21 +5,21 @@
 class Url < Formula
   desc "Parse URLs and print structured data in JSON and YAML."
   homepage "https://github.com/maerics/url"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/maerics/url/releases/download/v0.1.1/url_v0.1.1_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "ca20dd849ab2e7e5b306e71f5ef0a61d0c3b5ef998615e9fedc170243f1becde"
+      url "https://github.com/maerics/url/releases/download/v0.1.2/url_v0.1.2_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "1813722879500521ed7704ca454beb488ef5232e95cb202638bd70d962637fdf"
 
       define_method(:install) do
         bin.install "url"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/maerics/url/releases/download/v0.1.1/url_v0.1.1_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "1566753bf3f4da9651a225f061b53ca1177ef233e0dab915cca08ee75a9ff540"
+      url "https://github.com/maerics/url/releases/download/v0.1.2/url_v0.1.2_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "6aa500161ca5147cdd17c5416569224c2cb82cb5416356eb5ea0578376ee967e"
 
       define_method(:install) do
         bin.install "url"
@@ -29,15 +29,15 @@ class Url < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/maerics/url/releases/download/v0.1.1/url_v0.1.1_linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "8118d5f86db5eb37826154d57a48b3b48466014498832dd4a9659e2dbcc64bfb"
+      url "https://github.com/maerics/url/releases/download/v0.1.2/url_v0.1.2_linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "fdb8246a5af7a42a30f855a7a440aa6f48fb9bf5b8a5457dd648d3386b4c89a3"
       define_method(:install) do
         bin.install "url"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/maerics/url/releases/download/v0.1.1/url_v0.1.1_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "fed274c3671f6baf08138603e5bfc821bf666e6257f0817b19f2c129ebb5fea6"
+      url "https://github.com/maerics/url/releases/download/v0.1.2/url_v0.1.2_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "efa3e0e30583da2ad39e763d3462e4e8f2cef55f16af553bfbd02eb0119e4cdd"
       define_method(:install) do
         bin.install "url"
       end
