@@ -5,23 +5,23 @@
 class Url < Formula
   desc "Parse URLs and print structured data in JSON and YAML."
   homepage "https://github.com/maerics/url"
-  version "0.1.3"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/maerics/url/releases/download/v0.1.3/url_v0.1.3_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "903b6348481897b5054a60917f36219fb258ceb6bc891264f2ff5310ecfb25df"
+      url "https://github.com/maerics/url/releases/download/v0.2.0/url_v0.2.0_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "e8935c265d2fd66c79a7597fffe16ae71b711b452abdc55348eff76f5a5f77d5"
 
-      define_method(:install) do
+      def install
         bin.install "url"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/maerics/url/releases/download/v0.1.3/url_v0.1.3_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "e342b867fe3c8aae6eafccb69e04c651d2871f2acc8a0ee36da3c3345de0c902"
+      url "https://github.com/maerics/url/releases/download/v0.2.0/url_v0.2.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "4c1d8b99ec136fc01dc81d8edaf7e0d0c32b486221a4ca0bd657d3dd0538c599"
 
-      define_method(:install) do
+      def install
         bin.install "url"
       end
     end
@@ -29,16 +29,16 @@ class Url < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/maerics/url/releases/download/v0.1.3/url_v0.1.3_linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "44a9b2f776a633225efff0335ba9c1e60455fe7c4bd50d190a8795259c995602"
-      define_method(:install) do
+      url "https://github.com/maerics/url/releases/download/v0.2.0/url_v0.2.0_linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "b04c17c7e9a812d6839221c943fdb2dd63174569740e69a1374753e1343dca63"
+      def install
         bin.install "url"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/maerics/url/releases/download/v0.1.3/url_v0.1.3_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "a1455d4fd7003750b70f90f17e401327477953be6ecf699df65fdd2595e74ba6"
-      define_method(:install) do
+      url "https://github.com/maerics/url/releases/download/v0.2.0/url_v0.2.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "37bc4c702ef463c0142e1fd38536550b443496b37c38ea732ef186a4727408fb"
+      def install
         bin.install "url"
       end
     end
