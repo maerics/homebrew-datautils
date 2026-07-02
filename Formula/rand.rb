@@ -5,21 +5,21 @@
 class Rand < Formula
   desc "Print random bytes from a secure source to stdout."
   homepage "https://github.com/maerics/rand"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/maerics/rand/releases/download/v0.2.0/rand_v0.2.0_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "423ddc9437112dad50c35edcfbc37aa78bc0a1bdb40962d08c3e9eec7720c108"
+      url "https://github.com/maerics/rand/releases/download/v0.3.0/rand_v0.3.0_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "9c52d8cd7fa24865b8836a18ded0622763920a977ff09311ddbe9411524cb4da"
 
       def install
         bin.install "rand"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/maerics/rand/releases/download/v0.2.0/rand_v0.2.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "f4ab46830d0767ccb413075e5ae72b3fd1d822d1f7774fd92fb64ad9dd026abe"
+      url "https://github.com/maerics/rand/releases/download/v0.3.0/rand_v0.3.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "c30fe28cf8c5c9f032fcb5d79bede6ceb90a415c41fd3e5a38f2589ddd4d9974"
 
       def install
         bin.install "rand"
@@ -29,15 +29,15 @@ class Rand < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/maerics/rand/releases/download/v0.2.0/rand_v0.2.0_linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "2c93b794103f08998c5123e65505b1afc8d9dc0fac37cf35339b870bf23ba8de"
+      url "https://github.com/maerics/rand/releases/download/v0.3.0/rand_v0.3.0_linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "7453123aafa101c4a87683525c26990610b197156dda45b07942ef0097dcc7cc"
       def install
         bin.install "rand"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/maerics/rand/releases/download/v0.2.0/rand_v0.2.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "4e72c0ac47c9a12771ea6948d2708556cc7a467a660406c55fc063835878f4cf"
+      url "https://github.com/maerics/rand/releases/download/v0.3.0/rand_v0.3.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "5dd3955208cdc0b21a1e6caaac4e8a0cc90fa1bbf54ad558c6e5c65685127349"
       def install
         bin.install "rand"
       end
