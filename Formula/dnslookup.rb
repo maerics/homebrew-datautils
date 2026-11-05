@@ -5,23 +5,23 @@
 class Dnslookup < Formula
   desc "Resolve DNS records for a host and print them as JSON or YAML."
   homepage "https://github.com/maerics/dnslookup"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/maerics/dnslookup/releases/download/v0.1.0/dnslookup_v0.1.0_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "87b221ee5ae36a86b32275c4bdacec926c1faff04541694048f099ac3de1a653"
+      url "https://github.com/maerics/dnslookup/releases/download/v0.2.0/dnslookup_v0.2.0_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "dbedffa34d2273bafa9f30638377dfa5464cf505157149fe130fe5a21edf592f"
 
-      def install
+      define_method(:install) do
         bin.install "dnslookup"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/maerics/dnslookup/releases/download/v0.1.0/dnslookup_v0.1.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "fc7bce632e84e5ac7f9af792e59b1af79b6582feadc352827d597a0283586946"
+      url "https://github.com/maerics/dnslookup/releases/download/v0.2.0/dnslookup_v0.2.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "90c26745013ce0493c32c46e9956e7409fb8cbe6485dd415ae79f8475b1e0368"
 
-      def install
+      define_method(:install) do
         bin.install "dnslookup"
       end
     end
@@ -29,16 +29,16 @@ class Dnslookup < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/maerics/dnslookup/releases/download/v0.1.0/dnslookup_v0.1.0_linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "d1acd094cd04c0ff71af8f4b93224d3e7cb58df98a21387641c55f04d5a544cb"
-      def install
+      url "https://github.com/maerics/dnslookup/releases/download/v0.2.0/dnslookup_v0.2.0_linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "f92a57b803b78ab9410d59bbfe9325ca59d5f4be59d1a635b38285dd3cd481bb"
+      define_method(:install) do
         bin.install "dnslookup"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/maerics/dnslookup/releases/download/v0.1.0/dnslookup_v0.1.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "208bebe975680ab6ef6048bcf2486d48f17ed0d9bd843b43d3205bf41abbcfcd"
-      def install
+      url "https://github.com/maerics/dnslookup/releases/download/v0.2.0/dnslookup_v0.2.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "ad0a468845c810d89300bb47a542fd0d1a08a8ab6c447920ecfa92c8555e2cb2"
+      define_method(:install) do
         bin.install "dnslookup"
       end
     end
